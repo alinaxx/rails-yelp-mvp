@@ -45,7 +45,7 @@ class RestaurantsController < ApplicationController
         format.html { redirect_to @restaurant, notice: 'Restaurant was successfully updated.' }
         format.json { render :show, status: :ok, location: @restaurant }
       else
-        format.html { render :edit }
+        format.html { render :new }
         format.json { render json: @restaurant.errors, status: :unprocessable_entity }
       end
     end
